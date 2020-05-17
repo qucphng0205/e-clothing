@@ -1,7 +1,11 @@
 export const TOGGLE_CART_DROPDOWN = "TOGGLE_CART_DROPDOWN";
+export const ADD_ITEM = "ADD_ITEM";
 
-const toggleCartDropdown = () => ({
+export const toggleCartDropdown = () => ({
   type: TOGGLE_CART_DROPDOWN,
 });
 
-export default toggleCartDropdown;
+export const addItem = (item) => ({
+  type: ADD_ITEM,
+  payload: item,
+});
