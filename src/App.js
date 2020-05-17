@@ -16,7 +16,6 @@ class App extends React.Component {
     const { setCurrentUser } = this.props;
 
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async (user) => {
-      console.log("WTF", user);
       if (user) {
         const userRef = await createUserProfileDocument(user);
         userRef.onSnapshot((snapshot) => {
@@ -34,7 +33,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log("App.js render", this.props.currentUser);
     return (
       <div>
         <BrowserRouter>
