@@ -39,21 +39,9 @@ class CheckoutPage extends React.Component {
     }
 }
 
-// const mapStateToProps = createStructuredSelector({
-//     cartItems: selectCartItems,
-//     totalPrice: selectCartTotalPrice,
-// })
-
-var abc = null;
-
-const mapStateToProps = (state) => {
-    if (abc != null)
-        console.log("??", state.cart.cartItems, state.cart.cartItems === abc, selectCartTotalPrice(state));
-    abc = state.cart.cartItems;
-    return ({
-        cartItems: state.cart.cartItems,
-        totalPrice: selectCartTotalPrice(state),
-    })
-};
+const mapStateToProps = createStructuredSelector({
+    cartItems: selectCartItems,
+    totalPrice: selectCartTotalPrice,
+})
 
 export default connect(mapStateToProps)(CheckoutPage);
