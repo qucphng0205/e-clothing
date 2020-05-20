@@ -9,7 +9,6 @@ import { createStructuredSelector } from 'reselect';
 
 class CartIcon extends React.Component {
     render() {
-        console.log("CartIcon re-render");
         return (
             <div className="cart-icon" onClick={() => this.props.toggleHidden()}>
                 <ShoppingIcon className="shopping-icon" />

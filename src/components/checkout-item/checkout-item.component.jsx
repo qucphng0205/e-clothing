@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 class CheckoutItem extends React.Component {
     render() {
-        console.log('CHECKOUT ITEM RE-RENDER', this.props.item);
         return (
             <div className="checkout-item">
                 <div className="image-container">

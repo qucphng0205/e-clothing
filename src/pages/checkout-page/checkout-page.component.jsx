@@ -7,7 +7,6 @@ import CheckoutItem from "../../components/checkout-item/checkout-item.component
 
 class CheckoutPage extends React.Component {
     render() {
-        console.log("CHECKOUT PAGE RERENDER", this.props.cartItems);
         return (
             <div className='checkout-page'>
                 <div className="checkout-header">
@@ -29,7 +28,6 @@ class CheckoutPage extends React.Component {
                 </div>
                 {
                     this.props.cartItems.map((item) => {
-                        console.log('item ne:', item)
                         return <CheckoutItem key={item.id} item={item} />
                     })
                 }
